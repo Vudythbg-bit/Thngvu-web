@@ -38,18 +38,18 @@
         }
 
         .container i:nth-child(1) {
-            border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-            animation: animate 6s linear infinite;
+            animation: animate 7s linear infinite;
+            transform: rotate(45deg);
         }
 
         .container i:nth-child(2) {
-            border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
-            animation: animate 4s linear infinite;
+            animation: animate 9s linear infinite;
+            transform: rotate(45deg);
         }
 
         .container i:nth-child(3) {
-            border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
-            animation: animate2 10s linear infinite;
+            animation: animate2 12s linear infinite;
+            transform: rotate(45deg);
         }
 
         .container:hover i {
@@ -61,6 +61,7 @@
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
@@ -70,6 +71,7 @@
             0% {
                 transform: rotate(360deg);
             }
+
             100% {
                 transform: rotate(0deg);
             }
@@ -103,66 +105,65 @@
             background: transparent;
             border: 2px solid #fff;
             border-radius: 40px;
-            font-size: 1.1em;
+            font-size: 1.2em;
             color: #fff;
+            box-shadow: none;
             outline: none;
         }
 
-        .login .input-box input::placeholder {
-            color: rgba(255, 255, 255, 0.75);
-        }
-
         .login .input-box input[type="submit"] {
+            width: 100%;
+            background: #0078ff;
             background: linear-gradient(45deg, #0078ff, #b153d7);
             border: none;
             cursor: pointer;
-            transition: 0.3s;
         }
 
         .login .input-box input[type="submit"]:hover {
             background: linear-gradient(45deg, #7adaa5, #0078ff);
-            box-shadow: 0 0 15px #fff;
+            box-shadow: 1px 1px 20px 1px #fff;
+        }
+
+        .login .input-box input::placeholder {
+            color: rgba(255, 255, 255, .75);
         }
 
         .login .links {
+            position: relative;
             width: 100%;
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            padding: 0 5px;
+            padding: 0 20px;
         }
 
         .login .links a {
-            color: #fff;
             text-decoration: none;
-            font-size: 0.9em;
+            color: #fff;
         }
 
         .login .links a:hover {
-            color: #0ef;
+            color: #0078ff;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <i style="--clr:#4ca0ff;"></i>
-        <i style="--clr:#7adaa5;"></i>
-        <i style="--clr:#b153d7;"></i>
+        <i style="--clr: #4ca0ff;"></i>
+        <i style="--clr: #7adaa5;"></i>
+        <i style="--clr: #b153d7;"></i>
 
         <div class="login">
             <h2>Login Form</h2>
-
             <div class="input-box">
-                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Username" required>
             </div>
-
             <div class="input-box">
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" required>
             </div>
-
             <div class="input-box">
                 <input type="submit" value="Sign In">
             </div>
-
             <div class="links">
                 <a href="#">Forgot Password?</a>
                 <a href="#">Sign Up</a>
